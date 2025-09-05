@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 1 - Evidencias</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      margin-right: 12px;
+    }
+    nav a:hover {
+      color: #000;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    section {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    p, ul {
+      margin: 0 0 10px 0;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    /* Galería de imágenes */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .galeria p {
+      font-size: 0.85em;
+      color: #555;
+      text-align: center;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../parciales/parcialp.html">⬅ Volver al Parcial</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Semana 1 - Evidencias</h1>
+
+    <section>
+      <h2>Instalar MAMP</h2>
+      <ul>
+        <li>Descargar e instalar MAMP.</li>
+        <li>Configurar el puerto.</li>
+        <li>Carpeta de trabajo: <code>htdocs</code>.</li>
+      </ul>
+      <div class="galeria">
+        <div>
+          <img src="../semana1/mamp1.png" alt="Instalación MAMP 1">
+          <p>Paso 1</p>
+        </div>
+        <div>
+          <img src="../semana1/mamp2.png" alt="Instalación MAMP 2">
+          <p>Paso 2</p>
+        </div>
+        <div>
+          <img src="../semana1/mamp3.png" alt="Instalación MAMP 3">
+          <p>Paso 3</p>
+        </div>
+        <div>
+          <img src="../semana1/mamp4.png" alt="Instalación MAMP 4">
+          <p>Paso 4</p>
+        </div>
+        <div>
+          <img src="../semana1/mamp5.png" alt="Instalación MAMP 5">
+          <p>Paso 5</p>
+        </div>
+        <div>
+          <img src="../semana1/mamp6.png" alt="Instalación MAMP 6">
+          <p>Paso 6</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Instalar Visual Studio Code</h2>
+      <ul>
+        <li>Descargar desde la página oficial.</li>
+        <li>Instalar en el sistema.</li>
+        <li>Agregar extensiones.</li>
+      </ul>
+      <div class="galeria">
+        <div>
+          <img src="../semana1/vscode1.png" alt="VSCode Paso 1">
+          <p>Paso 1</p>
+        </div>
+        <div>
+          <img src="../semana1/vscode2.png" alt="VSCode Paso 2">
+          <p>Paso 2</p>
+        </div>
+        <div>
+          <img src="../semana1/vscode3.png" alt="VSCode Paso 3">
+          <p>Paso 3</p>
+        </div>
+        <div>
+          <img src="../semana1/vscode4.png" alt="VSCode Paso 4">
+          <p>Paso 4</p>
+        </div>
+        <div>
+          <img src="../semana1/vscode5.png" alt="VSCode Paso 5">
+          <p>Paso 5</p>
+        </div>
+        <div>
+          <img src="../semana1/vscode6.png" alt="VSCode Paso 6">
+          <p>Paso 6</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aquí seguirían los demás temas igual que antes (carpeta de trabajo, extensión, etc.)
+         Cada uno puede tener 1 imagen o más, dependiendo de lo que necesites -->
+         <section>
+      <h2>Carpeta de trabajo</h2>
+      <p>Los archivos deben guardarse dentro de <code>htdocs</code> para ejecutarse desde el navegador.</p>
+      <div class="img-ref">
+        <img src="../semana1/vscode6.png" alt="Carpeta htdocs">
+        <p>Imagen de referencia: Carpeta de trabajo</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Extensión de archivos</h2>
+      <p>Los archivos de PHP se guardan con la extensión <code>.php</code>.</p>
+      <div class="img-ref">
+        <img src="../imagenes/semana1/extension.png" alt="Extensión PHP">
+        <p>Imagen de referencia: Extensión .php</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Editar código PHP</h2>
+      <pre>
+&lt;?php
+  echo "Hola Mundo en PHP";
+?&gt;
+      </pre>
+      <div class="img-ref">
+        <img src="../semana1/php.png" alt="Editar PHP en VSCode">
+        <p>Imagen de referencia: Editando código PHP en VSCode</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Guardar archivos</h2>
+      <p>Los archivos deben guardarse en <code>htdocs</code> con extensión <code>.php</code>.</p>
+      <div class="img-ref">
+        <img src="../semana1/guardar1.png" alt="Guardar archivo"><br>
+        <img src="../semana1/vscode6.png" alt="htdocs">
+        <p>Cada archivo guardado que hagamos se mantendra en la carpea de htdocs que tiene MAMP la cual entramos anteriormente</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Visualizar archivos</h2>
+      <p>Se accede desde el navegador con <code>http://localhost:8888/archivo.php</code></p>
+      <div class="img-ref">
+        <img src="../semana1/vista1.png" alt="Visualizar en navegador">
+        <p>Imagen de referencia: Visualizar archivo en navegador</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Variables en PHP</h2>
+      <pre>
+&lt;?php
+  $nombre = "Juan";
+  $edad = 18;
+  echo "Mi nombre es $nombre y tengo $edad años.";
+?&gt;
+      </pre>
+      <div class="img-ref">
+        <img src="../semana1/variables1.png" alt="Variables en PHP">
+        <p>Imagen de referencia: Uso de variables</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
