@@ -136,6 +136,7 @@
 
   <main>
     <h1>Semana 1 - Evidencias</h1>
+    <h2>(Link del video al final de la pagina )</h2>
 
     <section>
       <h2>¿Qué es PHP?</h2>
@@ -283,57 +284,130 @@
     </section>
 
     <section>
-      <h2>Extensión de archivos</h2>
-      <p>
-        Los archivos de PHP deben guardarse con la extensión <code>.php</code>. 
-        Esto indica al servidor que debe interpretar el contenido como código PHP.
-      </p>
-      <div class="img-ref">
-        <img src="../imagenes/semana1/extension.png" alt="Extensión PHP">
-        <p>Imagen de referencia: Extensión .php</p>
-      </div>
-    </section>
+  <h2>Archivos PHP y su Extensión</h2>
+  <p>
+    Todos los archivos que contengan código PHP deben guardarse con la extensión 
+    <strong>.php</strong>. Esto le indica al <em>servidor</em> (como MAMP o XAMPP) 
+    que debe interpretar el código antes de mostrar la página en el navegador.
+  </p>
+  <p>
+    Si el archivo se guarda como <code>.html</code>, el navegador mostrará el código 
+    PHP como texto en lugar de ejecutarlo.
+  </p>
+  <p>Normalmente se usan nombres como:</p>
+  <ul>
+    <li><code>index.php</code> → Página de inicio</li>
+    <li><code>conexion.php</code> → Conexión a bases de datos</li>
+    <li><code>funciones.php</code> → Funciones reutilizables</li>
+  </ul>
+
+  <h3>Ejemplo simple:</h3>
+  <pre><code>&lt;?php
+  echo "¡Hola, mundo!";
+?&gt;</code></pre>
+
+  <p>
+    Si guardas este archivo como <code>prueba.php</code> y lo abres en 
+    <strong>http://localhost/prueba.php</strong>, el servidor mostrará:
+  </p>
+
+  <div class="resultado">
+    ¡Hola, mundo!
+  </div>
+</section>
+
 
     <section>
-      <h2>Editar código PHP</h2>
-      <pre>
+  <h2>Editar código PHP</h2>
+  <p>
+    Una vez instalado <strong>Visual Studio Code</strong>, podemos crear un nuevo archivo con 
+    la extensión <code>.php</code>. Dentro de este archivo escribimos código PHP entre las etiquetas:
+  </p>
+
+  <pre>
 &lt;?php
   echo "Hola Mundo en PHP";
 ?&gt;
-      </pre>
-      <div class="img-ref">
-        <img src="../semana1/php.png" alt="Editar código en VSCode">
-        <p>Imagen de referencia: Editando código en VSCode</p>
-      </div>
-    </section>
+  </pre>
 
-    <section>
-      <h2>Guardar archivos</h2>
-      <p>
-        Los archivos deben guardarse en la carpeta <code>htdocs</code> con la extensión <code>.php</code>. 
-        De esta manera, podrán ejecutarse en el navegador.
-      </p>
-      <div class="img-ref">
-        <img src="../semana1/guardar1.png" alt="Guardar archivo">
-        <p>Guardando archivo en Visual Studio Code</p>
-        <img src="../semana1/mamp7.png" alt="htdocs">
-        <p>Ubicación de los archivos en <code>htdocs</code></p>
-      </div>
-    </section>
+  <p>
+    La instrucción <code>echo</code> se utiliza para mostrar texto en la página.  
+    En este ejemplo, el navegador mostrará:
+  </p>
 
-    <section>
-      <h2>Visualizar archivos</h2>
-      <p>
-        Para visualizar un archivo, abre el navegador y escribe en la barra de direcciones:  
-        <code>http://localhost/archivo.php</code>.  
-        Si configuraste un puerto distinto, añade el número:  
-        <code>http://localhost:8888/archivo.php</code>.
-      </p>
-      <div class="img-ref">
-        <img src="../semana1/vista1.png" alt="Visualizar en navegador">
-        <p>Imagen de referencia: Visualización en navegador</p>
-      </div>
-    </section>
+  <div class="resultado">
+    Hola Mundo en PHP
+  </div>
+
+  <p>
+    👉 Es importante guardar el archivo dentro de la carpeta <code>htdocs</code> y luego abrirlo desde 
+    el navegador escribiendo <code>http://localhost/nombreArchivo.php</code>.
+  </p>
+
+  <div class="img-ref">
+    <img src="../semana1/php.png" alt="Editar código en VSCode">
+    <p>Imagen de referencia: Editando código en VSCode</p>
+  </div>
+</section>
+
+   <section>
+  <h2>Guardar archivos</h2>
+  <p>
+    Para que el servidor de <strong>MAMP</strong> pueda ejecutar nuestros proyectos, es necesario 
+    guardar los archivos dentro de la carpeta <code>htdocs</code>. 
+    Esta carpeta funciona como el “directorio raíz” del servidor.
+  </p>
+
+  <p>
+    📌 Recomendación: puedes crear dentro de <code>htdocs</code> una carpeta con el nombre de tu proyecto, 
+    por ejemplo: <code>htdocs/mi_proyecto</code>.  
+    Así mantendrás todos los archivos organizados.
+  </p>
+
+  <p>
+    Recuerda también que los archivos de PHP deben guardarse con la extensión <code>.php</code>. 
+    Esto indica al servidor que debe procesarlos antes de enviarlos al navegador.
+  </p>
+
+  <div class="img-ref">
+    <img src="../semana1/guardar1.png" alt="Guardar archivo">
+    <p>Guardando archivo en Visual Studio Code</p>
+    <img src="../semana1/mamp7.png" alt="htdocs">
+    <p>Ubicación de los archivos en <code>htdocs</code></p>
+  </div>
+</section>
+
+
+   <section>
+  <h2>Visualizar archivos</h2>
+  <p>
+    Una vez que el archivo esté guardado en la carpeta <code>htdocs</code>, 
+    podemos abrirlo en el navegador utilizando la dirección <code>http://localhost</code>.  
+    Por ejemplo: <code>http://localhost/archivo.php</code>.
+  </p>
+
+  <p>
+    Si creaste una carpeta con el nombre de tu proyecto, debes incluirla en la ruta.  
+    Ejemplo: <code>http://localhost/mi_proyecto/index.php</code>.
+  </p>
+
+  <p>
+    ⚠️ Importante: si configuraste un puerto distinto en MAMP (por defecto es el <code>8888</code> en macOS), 
+    deberás añadirlo en la dirección. Ejemplo:  
+    <code>http://localhost:8888/archivo.php</code>.
+  </p>
+
+  <p>
+    Si todo está correcto, el navegador mostrará el resultado de tu código PHP interpretado 
+    como una página web.
+  </p>
+
+  <div class="img-ref">
+    <img src="../semana1/vista2.png" alt="Visualizar en navegador">
+    <p>Imagen de referencia: Visualización en navegador</p>
+  </div>
+</section>
+
 
     <section>
       <h2>Variables en PHP</h2>
@@ -347,6 +421,14 @@
         <p>Imagen de referencia: Uso de variables</p>
       </div>
     </section>
+<section>
+  <h2>Link de video de YouTube 📽️</h2>
+  <a href="https://www.youtube.com/watch?v=zChQRq3gpL4" target="_blank">
+    Haz click!
+  </a>
+</section>
+
+
   </main>
 </body>
 </html>
