@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.7;
+      padding: 20px 40px;
+    }
+
+    header {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      margin-right: 20px;
+      letter-spacing: 1px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #555;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3em;
+      margin: 20px 0 40px;
+      text-align: center;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-left: 4px solid #000;
+      padding-left: 10px;
+    }
+
+    p, ul {
+      margin: 0 0 15px 0;
+      text-align: justify;
+      font-size: 1em;
+      color: #333;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    pre {
+      background: #111;
+      color: #fff;
+      padding: 12px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 0.95em;
+    }
+
+    /* Galería de imágenes */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 180px;
+      border-radius: 4px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #ccc;
+    }
+
+    .galeria p {
+      font-size: 0.85em;
+      color: #555;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    /* Imágenes individuales */
+    .img-ref img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+      margin: 15px auto;
+      border: 1px solid #ccc;
+    }
+
+    .img-ref p {
+      font-size: 0.85em;
+      color: #555;
+      text-align: center;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../parciales/parcialp.html"> ⬅ Volver al Parcial</a>
+  </header>
+
+  <main>
+    <h1>Semana 2</h1>
+
+    <section>
+      <h2>Comentarios</h2>
+      <p>En PHP, los comentarios son fragmentos de texto dentro del código que no se ejecutan. Sirven para dejar notas, aclaraciones o explicaciones para ti mismo u otras personas que lean el programa.
+
+Son muy útiles para:
+
+Explicar qué hace una parte del código.
+
+Recordar por qué escribiste algo de cierta manera.
+
+Desactivar temporalmente una línea de código sin borrarla.</p>
+      <pre>
+// Comentario de una línea
+# Comentario estilo shell
+/* Comentario de
+   varias líneas */
+      </pre>
+      <div class="img-ref">
+        <img src="../semana2/comentarios.jpeg" alt="Ejemplo de comentarios en PHP">
+        <p>Ejemplo de comentarios en PHP</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Concatenación</h2>
+      <p>En **PHP**, la **concatenación** es la operación que permite **unir dos o más cadenas de texto (strings)** en una sola.
+
+Se utiliza principalmente para construir mensajes, combinar variables con texto o formar valores dinámicos.
+
+En PHP, la concatenación se hace con el **operador punto (`.`)**. También existe el operador de **asignación con concatenación (`.=`)** que añade contenido a una cadena ya existente.
+
+En resumen: la concatenación sirve para **juntar cadenas y variables en un solo string** dentro de un programa en PHP.
+</p>
+      <pre>
+$nombre = "Juan";
+$saludo = "Hola " . $nombre;
+echo $saludo; // Hola Juan
+      </pre>
+      <div class="img-ref">
+        <img src="../semana2/concatenacion.png" alt="Concatenación en PHP">
+        <p>Concatenación de cadenas en PHP</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Variables</h2>
+      <p>En PHP, una variable es un espacio de memoria que se utiliza para almacenar datos que pueden cambiar durante la ejecución de un programa.
+
+Las características principales de las variables en PHP son:
+
+Siempre comienzan con el signo de dólar ($).
+
+El nombre distingue entre mayúsculas y minúsculas.
+
+No es necesario declarar el tipo de dato, ya que PHP es un lenguaje de tipado débil (la variable puede cambiar de tipo automáticamente según el valor asignado).
+
+Pueden almacenar diferentes tipos de datos, como números, cadenas de texto, arreglos u objetos.
+
+En resumen: una variable en PHP es un contenedor dinámico de información que se puede usar y modificar en el programa.</p>
+      <pre>
+$nombre = "Daniel";
+$edad = 20;
+$esAlumno = true;
+      </pre>
+      <div class="img-ref">
+        <img src="../semana2/variables.png" alt="Variables en PHP">
+        <p>Ejemplo de variables en PHP</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expresiones</h2>
+      <p>En **PHP**, una **expresión** es cualquier combinación válida de **valores, variables, operadores y funciones** que produce un **resultado**.
+
+Algunas características:
+
+* Siempre generan un valor, aunque sea temporal.
+* Pueden ser simples (un número, una cadena, una variable) o complejas (operaciones aritméticas, lógicas o llamadas a funciones).
+* Son los componentes básicos que PHP evalúa dentro de sentencias y estructuras de control.
+
+En resumen: una expresión en PHP es una **unidad de código que PHP evalúa y resuelve en un valor**.
+</p>
+      <pre>
+$expresion = (3 + 5) * 2; // 16
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores</h2>
+      <p>En **PHP**, los **operadores** son elementos del lenguaje que se utilizan para **realizar distintas operaciones sobre los datos**, ya sean valores literales, variables o resultados de expresiones. Permiten manipular, comparar y combinar información dentro del programa, y son fundamentales para controlar la lógica, los cálculos y la interacción entre los diferentes elementos del código. En otras palabras, los operadores son la **herramienta principal que PHP ofrece para procesar y transformar datos de manera dinámica**.
+</p>
+    </section>
+
+    <section>
+      <h2>Precedencia de operadores</h2>
+      <p>La **precedencia de operadores** en PHP se refiere al **orden en que se ejecutan las operaciones** cuando una expresión contiene varios operadores diferentes.
+
+Esto determina **qué operación se realiza primero**, incluso sin paréntesis. Si no se respeta este orden, el resultado de la expresión puede ser diferente al esperado.
+
+En resumen: la precedencia de operadores establece **la prioridad de ejecución entre los distintos operadores** dentro de una expresión en PHP.
+</p>
+      <pre>
+$resultado = 5 + 3 * 2; // 11 (multiplicación antes que suma)
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores aritméticos</h2>
+      <p>Los **operadores aritméticos** en PHP son **símbolos que permiten realizar operaciones matemáticas básicas** sobre números, como suma, resta, multiplicación, división y módulo.
+
+Se utilizan para **calcular valores numéricos, manipular variables y realizar operaciones matemáticas dentro de un programa**.
+</p>
+      <pre>
++  Suma
+-  Resta
+*  Multiplicación
+/  División
+%  Módulo (residuo)
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores de asignación</h2>
+      <p>Los **operadores de asignación** en PHP son herramientas que permiten **asignar valores a las variables** y, al mismo tiempo, **modificar su contenido de manera eficiente**.
+
+El operador más básico es el de asignación simple (`=`), que toma el valor de la derecha y lo almacena en la variable de la izquierda. Además, existen operadores de asignación combinados que **fusionan una operación con la asignación**, como sumar, restar, multiplicar o dividir directamente sobre el valor de la variable sin necesidad de escribir la operación completa por separado.
+
+Estos operadores son fundamentales porque **facilitan la manipulación de datos numéricos, cadenas y otros tipos de variables**, haciendo el código más compacto y legible. También ayudan a **evitar errores al actualizar valores repetidamente** dentro de programas más complejos.
+</p>
+      <pre>
+$x = 10;
+$x += 5; // 15
+$x -= 3; // 12
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores de comparación</h2>
+      <p>Los **operadores de comparación** en PHP son símbolos que se utilizan para **comparar dos valores** y determinar la relación entre ellos.
+
+El resultado de una comparación siempre es **un valor booleano**: verdadero (`true`) o falso (`false`).
+
+Se usan para **tomar decisiones en el programa**, como decidir qué bloque de código ejecutar dentro de estructuras de control (`if`, `while`, etc.) según si una condición se cumple o no.
+</p>
+      <pre>
+== Igual
+!= Diferente
+>  Mayor
+<  Menor
+>= Mayor o igual
+<= Menor o igual
+=== Igual en valor y tipo
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores de incremento/decremento</h2>
+      <p>Los **operadores de incremento y decremento** en PHP son símbolos que se utilizan para **aumentar o disminuir el valor de una variable en una unidad**.
+
+Permiten **modificar rápidamente el valor de una variable numérica** sin tener que escribir la operación completa. Son muy útiles en **bucles y ciclos**, donde se necesita ajustar contadores o índices de manera eficiente.
+</p>
+      <pre>
+$x = 5;
+echo ++$x; // 6 (pre-incremento)
+echo $x--; // 6, pero luego $x=5
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores lógicos</h2>
+      <p>Los **operadores lógicos** en PHP son símbolos que se utilizan para **combinar o invertir expresiones booleanas**.
+
+Su función principal es **evaluar condiciones compuestas**, permitiendo que el programa decida el flujo de ejecución según múltiples criterios. Los resultados de estos operadores siempre son **verdadero (`true`) o falso (`false`)**, y son fundamentales en estructuras de control como `if`, `while` o `for`.
+</p>
+      <pre>
+&&  AND (y)
+||  OR (o)
+!   NOT (no)
+      </pre>
+      <pre>
+$edad = 20;
+if ($edad > 18 && $edad < 30) {
+  echo "Edad válida";
+}
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores para strings</h2>
+<p>Los **operadores para strings** en PHP son herramientas que permiten **trabajar de manera flexible con cadenas de texto**, realizando operaciones como unir varias cadenas, agregar contenido a una cadena existente o comparar textos.
+
+Estos operadores son fundamentales cuando se necesita **generar mensajes dinámicos, construir resultados basados en variables o procesar datos textuales**. Facilitan la manipulación de strings sin necesidad de recurrir a funciones más complejas, haciendo el código más **claro y eficiente**.
+</p>    </section>
+
+    <section>
+      <h2>Operadores para arrays</h2>
+      <p>Los **operadores para arrays** en PHP son símbolos que se utilizan para **manipular y comparar arreglos (arrays)** dentro de un programa.
+
+Permiten **unir, comparar o verificar la igualdad de arrays**, facilitando la gestión de colecciones de datos, la combinación de múltiples arrays y la evaluación de su contenido de manera lógica y estructurada. Estos operadores ayudan a **simplificar operaciones complejas sobre conjuntos de datos** sin necesidad de recorrerlos manualmente.
+</p>
+      <pre>
+$a = [1,2];
+$b = [2,3];
+$c = $a + $b; // Unión
+$a == $b;     // Igualdad de valores
+$a === $b;    // Igualdad de valores y tipos
+      </pre>
+    </section>
+
+    <section>
+      <h2>Operadores de tipo</h2>
+      <p>Los **operadores de tipo** en PHP son símbolos que se utilizan para **verificar o convertir el tipo de dato de una variable**.
+
+Permiten determinar si una variable es de un tipo específico, como entero, cadena, arreglo u objeto, y también facilitan **castear o transformar valores de un tipo a otro** cuando es necesario para la ejecución correcta del programa. Estos operadores son importantes para **controlar y garantizar la coherencia de los datos** en las operaciones y evitar errores por tipos incompatibles.
+.</p>
+      <pre>
+var_dump(is_int(5)); // true
+var_dump(is_string("hola")); // true
+      </pre>
+    </section>
+
+    <section>
+      <h2>Estructuras de Control</h2>
+      <p>Las **estructuras de control** en PHP son **mecanismos que permiten dirigir el flujo de ejecución del programa** según ciertas condiciones o repeticiones.
+
+Se utilizan para **tomar decisiones, ejecutar código de manera condicional o repetir acciones múltiples veces**, dependiendo de los valores de variables o el cumplimiento de expresiones lógicas. En otras palabras, son herramientas que **controlan qué instrucciones se ejecutan, cuándo y cuántas veces**, haciendo que el programa sea dinámico y adaptable.
+ <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>switch</code>, etc.</p>
+    </section>
+
+    <section>
+      <h2>Sentencia if</h2>
+      <p>La **sentencia `if`** en PHP es una **estructura de control que permite ejecutar un bloque de código solo si se cumple una condición determinada**.
+
+Se utiliza para **tomar decisiones dentro del programa**, evaluando expresiones booleanas y permitiendo que ciertas instrucciones se ejecuten únicamente cuando la condición es verdadera. Esto hace que el flujo del programa sea **condicional y flexible**, adaptándose a distintas situaciones según los datos disponibles.
+</p>
+      <pre>
+$edad = 18;
+
+if ($edad >= 18) {
+  echo "Eres mayor de edad";
+} else {
+  echo "Eres menor de edad";
+}
+      </pre>
+      <div class="img-ref">
+        <img src="../semana2/if.png" width="450" alt="Sentencia if en PHP">
+        <p>Ejemplo de sentencia if en PHP</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
