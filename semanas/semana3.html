@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Semana 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.7;
+      padding: 20px 40px;
+    }
+
+    header {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      margin-right: 20px;
+      letter-spacing: 1px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #555;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3em;
+      margin: 20px 0 40px;
+      text-align: center;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-left: 4px solid #000;
+      padding-left: 10px;
+    }
+
+    p, ul {
+      margin: 0 0 15px 0;
+      text-align: justify;
+      font-size: 1em;
+      color: #333;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    pre {
+      background: #111;
+      color: #fff;
+      padding: 12px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 0.95em;
+    }
+
+    /* Galería de imágenes */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 180px;
+      border-radius: 4px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #ccc;
+    }
+
+    .galeria p {
+      font-size: 0.85em;
+      color: #555;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    /* Imágenes individuales */
+    .img-ref img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+      margin: 15px auto;
+      border: 1px solid #ccc;
+    }
+
+    .img-ref p {
+      font-size: 0.85em;
+      color: #555;
+      text-align: center;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">Volver a parciales</a>
+  </header>
+
+  <main>
+    <h1>Semana 3</h1>
+    <h2>Link del video abajo de la pagina!</h2>
+
+    <!-- Ordenar un arreglo bidimensional -->
+   <section>
+  <h2>Ordenar un arreglo bidimensional</h2>
+  <p>
+  Un arreglo bidimensional es una matriz (tabla) compuesta por filas y columnas que 
+  almacena datos de forma estructurada. Para ordenarlo existen varias estrategias: 
+  puedes recorrer todos sus elementos y aplicar un algoritmo de ordenamiento 
+  (como burbuja, selección o inserción) tratándolo como si fuera una sola lista 
+  —aplanando la matriz—, o bien aplicar el ordenamiento por cada fila o cada columna, 
+  según lo que necesites resolver. Esto permite organizar la información de manera 
+  más clara y facilitar operaciones posteriores, como búsquedas o cálculos.
+</p>
+
+
+  <p>Ejemplo completo (aplanar, ordenar y reconstruir usando <code>for</code>):</p>
+  <pre>
+&lt;?php
+if (isset($_POST['ordenar'])) {
+    $n = $_POST['numeros'];
+
+    for ($i = 0; $i < 3; $i++) {
+        for ($j = 0; $j < 3; $j++) {
+            for ($x = $i; $x < 3; $x++) {
+                for ($y = ($x == $i ? $j : 0); $y < 3; $y++) {
+                    if ($n[$i][$j] > $n[$x][$y]) {
+                        $aux = $n[$i][$j];
+                        $n[$i][$j] = $n[$x][$y];
+                        $n[$x][$y] = $aux;
+                    }
+                }
+            }
+        }
+    }
+
+    echo "<h3>Arreglo ordenado</h3>";
+   
+    for ($i = 0; $i < 3; $i++) {
+        echo "<tr>";
+        for ($j = 0; $j < 3; $j++) {
+            echo "<td>" . $n[$i][$j] . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+}
+?>&gt;
+  </pre>
+</section>
+
+
+    </section>
+
+    <!-- Suma de matrices -->
+    <section>
+      <h2>Suma de matrices</h2>
+     <p>
+  La suma de dos matrices solo es posible si ambas tienen las mismas dimensiones 
+  (igual número de filas y columnas). El procedimiento consiste en sumar cada 
+  elemento de la primera matriz con el que se encuentra en la misma posición 
+  <code>(i, j)</code> de la segunda. El resultado es una nueva matriz de las mismas 
+  dimensiones donde cada valor representa la suma correspondiente. 
+  Este proceso es muy usado en álgebra lineal y en programación para operaciones 
+  con datos estructurados.
+</p>
+
+
+      <p>Ejemplo:</p>
+      <pre>
+A = [1 2]   B = [4 5]
+    [3 4]       [6 7]
+
+A + B = [5 7]
+        [9 11]
+      </pre>
+
+      <table class="table-small" aria-label="Ejemplo suma de matrices">
+        <tr><th>Matriz A</th><th>Matriz B</th><th>Resultado A+B</th></tr>
+        <tr>
+          <td>[1 2]<br>[3 4]</td>
+          <td>[4 5]<br>[6 7]</td>
+          <td>[5 7]<br>[9 11]</td>
+        </tr>
+      </table>
+
+    </section>
+
+    <!-- Multiplicación de matrices -->
+    <section>
+      <h2>Multiplicación de matrices</h2>
+     <p>
+  La multiplicación de matrices A × B solo es posible si el número de columnas de la primera matriz (A) 
+  coincide con el número de filas de la segunda (B). El resultado será una nueva matriz donde cada elemento 
+  <code>(i, j)</code> se obtiene calculando la suma de los productos entre los elementos de la fila <code>i</code> 
+  de A y los elementos de la columna <code>j</code> de B. 
+  Este procedimiento es fundamental en matemáticas aplicadas, álgebra lineal, gráficos por computadora 
+  y programación, ya que permite combinar transformaciones y representar relaciones entre conjuntos de datos.
+</p>
+
+      <p>Ejemplo:</p>
+      <pre>
+A = [1 2]   B = [5 6]
+    [3 4]       [7 8]
+
+A x B = [
+ (1*5+2*7) (1*6+2*8)
+ (3*5+4*7) (3*6+4*8)
+] = [19 22][43 50]
+      </pre>
+
+      
+    </section>
+
+    <!-- Prevención de Adicciones - Día Mundial de la Salud Sexual -->
+    <section>
+      <h2>Prevención de Adicciones — Día Mundial de la Salud Sexual</h2>
+      <p>
+      <p>
+  El enfoque en la salud sexual incluye promover prácticas seguras, consentidas e informadas. 
+  Hablar abiertamente sobre sexualidad responsable ayuda a reducir mitos y estigmas, fomentando 
+  la confianza en jóvenes para tomar decisiones conscientes sobre su bienestar.
+</p>
+
+<p>
+  Las adicciones (alcohol, drogas, etc.) aumentan conductas de riesgo sexual y disminuyen la toma de decisiones seguras. 
+  El consumo de estas sustancias puede provocar falta de protección en las relaciones sexuales, mayor exposición a 
+  infecciones de transmisión sexual (ITS), embarazos no planeados y violencia.
+</p>
+
+<p>
+  Mensajes clave: educación sexual integral, acceso a servicios de salud, prevención de consumo y apoyo emocional 
+  para jóvenes. Relacionar campañas de salud sexual con prevención de adicciones fortalece el cuidado integral, 
+  creando espacios de confianza donde los adolescentes puedan resolver dudas y expresar inquietudes.
+</p>
+
+<p>
+  La combinación de programas escolares, orientación familiar y acceso a servicios de salud accesibles permite 
+  un acompañamiento más sólido. Además, promover actividades recreativas, deportivas y culturales se convierte 
+  en una estrategia preventiva que ofrece alternativas positivas frente al consumo de sustancias.
+</p>
+
+
+      <div class="img-ref">
+        <img src="../semana3/salud.jpg" alt="Prevención - Salud Sexual (placeholder)">
+        <p>Imagen referencia: campañas de salud y prevención</p>
+      </div>
+    </section>
+
+    <!-- Prevención de Adicciones - Fentanilo -->
+    <section>
+      <h2>Prevención de Adicciones — Fentanilo</h2>
+      <p>
+  El fentanilo es un opioide sintético extremadamente potente, hasta 50 veces más fuerte que la heroína 
+  y 100 veces más que la morfina. Su uso médico controlado ayuda en casos de dolor intenso, 
+  pero el consumo ilegal (mezclado con otras drogas) ha causado un aumento dramático de sobredosis, 
+  ya que pequeñas cantidades pueden ser mortales.
+</p>
+
+<p>
+  <strong>Puntos importantes de prevención:</strong> 
+  promover la educación sobre los riesgos, evitar cualquier consumo no médico, 
+  reconocer señales de sobredosis (respiración lenta, pupilas muy pequeñas, inconsciencia) 
+  y buscar ayuda inmediata llamando a emergencias o acudiendo a servicios de salud especializados.  
+  También es clave fomentar el apoyo familiar y comunitario, además de impulsar campañas 
+  de concientización en jóvenes y adultos.
+</p>
+
+
+      <div class="img-ref">
+        <img src="../semana3/fentanilo.jpg" alt="Prevención Fentanilo (placeholder)">
+        <p>Imagen de referencia: información y prevención sobre fentanilo</p>
+      </div>
+    </section>
+
+    <!-- cierre / referencias -->
+    <section>
+      <h2>Video</h2>
+     <a href="https://youtu.be/Izw6KpKWkT4">Dale click!</a>
+    </section>
+
+  </main>
+</body>
+</html>
